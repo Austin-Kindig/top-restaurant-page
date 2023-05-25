@@ -7,11 +7,14 @@ html, body {
 body {
     display: grid;
     grid-template-rows: 
-        4fr 20fr 1fr
+        2fr 20fr 1fr
     ;
 }
 header {
     background: #de8919;
+    display: flex;
+    align-items: center;
+    padding: 1vw;
 }
 #logo {
     display: grid;
@@ -20,13 +23,26 @@ header {
 #logo > img {
     width: 5rem;
 }
-
+main {
+    display: flex;
+    align-items: center;
+    background: #982d23;
+}
 #background {
     width: 100vw;
+    margin: auto;
+    border-radius: 1%;
 }
 footer {
-    background: #982d23;
+    background: #de8919;
     color: white;
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr;
+    align-items: center;
+    padding: 10px;
 }
-
-/*982d23 de8919*/
+li {
+    list-style-type: none;
+    margin: 5px 0px;
+    text-align: center;
+}
