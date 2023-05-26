@@ -1,3 +1,6 @@
+import O from './O.png';
+import vinyard from './vinyard.jpg';
+
 const loadHome = () => {
   const foundation = document.getElementById('content');
 
@@ -7,10 +10,9 @@ const loadHome = () => {
   const logo = document.createElement('div');
   header.appendChild(logo);
   logo.setAttribute('id', 'logo');
-  const logoImage = document.createElement('img');
+  const logoImage = new Image();
+  logoImage.src = O;
   logo.appendChild(logoImage);
-  logoImage.setAttribute('src', './O.png');
-  logoImage.setAttribute('alt', 'O');
   const logoText = document.createElement('h1');
   logo.appendChild(logoText);
   logoText.innerText = 'Restuarante';
@@ -18,16 +20,16 @@ const loadHome = () => {
   // main setup
   const main = document.createElement('main');
   foundation.appendChild(main);
-  const background = document.createElement('img');
-  background.setAttribute('src', 'https://images.unsplash.com/photo-1603657289433-e4983d2114b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80');
-  background.setAttribute('alt', 'beautiful vinyard');
+  const background = new Image();
+  background.src = vinyard;
+  background.setAttribute('id', 'background');
   main.appendChild(background);
 
   // footer setup
   const footer = document.createElement('footer');
   foundation.appendChild(footer);
   const copyright = document.createElement('p');
-  copyright.innerText = 'Austin Kindig 2023 &copy';
+  copyright.innerHTML = 'Austin Kindig 2023 &copy';
   copyright.setAttribute('id', 'copyright');
   footer.appendChild(copyright);
   const hours = document.createElement('div');
