@@ -17,6 +17,26 @@ const loadHome = () => {
   logo.appendChild(logoText);
   logoText.innerText = 'Restuarante';
 
+  // tabs section setup
+  const tabsSection = document.createElement('div');
+  tabsSection.setAttribute('id', 'tabs');
+  foundation.appendChild(tabsSection);
+  const menuTab = document.createElement('button');
+  menuTab.innerText = 'cardápio';
+  menuTab.setAttribute('class', 'tab');
+  menuTab.setAttribute('id', 'menu');
+  tabsSection.appendChild(menuTab);
+  const aboutTab = document.createElement('button');
+  aboutTab.innerText = 'sobre nós';
+  aboutTab.setAttribute('class', 'tab');
+  aboutTab.setAttribute('id', 'about');
+  tabsSection.appendChild(aboutTab);
+  const partnersTab = document.createElement('button');
+  partnersTab.innerText = 'parceiros';
+  partnersTab.setAttribute('class', 'tab');
+  partnersTab.setAttribute('id', 'partners');++
+  tabsSection.appendChild(partnersTab);
+
   // main setup
   const main = document.createElement('main');
   foundation.appendChild(main);

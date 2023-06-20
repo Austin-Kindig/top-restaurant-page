@@ -6,7 +6,7 @@ html, body, #content {
 #content {
     display: grid;
     grid-template-rows: 
-        2fr 200fr 1fr
+        4fr 1fr 200fr 1fr
     ;
 }
 header {
@@ -21,6 +21,28 @@ header {
 }
 #logo > img {
     width: 5rem;
+}
+#tabs {
+    background: #982d23;
+    display: flex;
+    align-content: center;
+}
+button.tab {
+    margin: auto;
+    width: 20%;
+    background-color: #7eb6db;
+    color:#982d23;
+    transition: 0.3s;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px 5px 0 0;
+
+}
+
+button.tab:hover {
+    background-color: #de8919;
+    color: black;
+    border-radius: 0 0 5px 5px;
 }
 main {
     display: flex;
