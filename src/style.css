@@ -23,40 +23,58 @@ header {
     width: 5rem;
 }
 #tabs {
-    background: #982d23;
+    background: #722f37;
     display: flex;
     align-content: center;
 }
 button.tab {
     margin: auto;
     width: 20%;
-    background-color: #7eb6db;
-    color:#982d23;
-    transition: 0.3s;
+    background-color: #de8919;
+    border-radius: 0 0 5px 5px;
     font-weight: bold;
     border: none;
-    border-radius: 5px 5px 0 0;
-
+    transition: .4s;
 }
 
 button.tab:hover {
-    background-color: #de8919;
-    color: black;
-    border-radius: 0 0 5px 5px;
+    background-color: #b46e12cb;
 }
+
 main {
     display: flex;
     align-items: center;
-    background: #982d23;
+    background: #722f37;
 }
 #background {
     width: 100vw;
     margin: auto;
     border-radius: 1%;
 }
+
+#about-partners, #menu, #about-us {
+    background-color: #7eb6db;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 5px 10px 10px #457ca0;
+    width: 80%;
+}
+
+#menu>ul {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+}
+
+h2,
+#about-partners>p, #about-us>p {
+    text-align: center;
+}
+
 footer {
     background: #de8919;
-    color: white;
     display: grid;
     grid-template-columns: 2fr 10fr 2fr;
     align-items: center;

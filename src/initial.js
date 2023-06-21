@@ -1,5 +1,6 @@
 import O from './O.png';
-import vinyard from './vinyard.jpg';
+import { clearPage } from './clear';
+import { loadMain } from './main';
 
 const loadHome = () => {
   const foundation = document.getElementById('content');
@@ -11,6 +12,7 @@ const loadHome = () => {
   header.appendChild(logo);
   logo.setAttribute('id', 'logo');
   const logoImage = new Image();
+  logoImage.setAttribute('id', 'logo-button');
   logoImage.src = O;
   logo.appendChild(logoImage);
   const logoText = document.createElement('h1');
@@ -22,28 +24,25 @@ const loadHome = () => {
   tabsSection.setAttribute('id', 'tabs');
   foundation.appendChild(tabsSection);
   const menuTab = document.createElement('button');
-  menuTab.innerText = 'cardápio';
+  menuTab.innerText = 'Cardápio';
   menuTab.setAttribute('class', 'tab');
-  menuTab.setAttribute('id', 'menu');
+  menuTab.setAttribute('id', 'menu-button');
   tabsSection.appendChild(menuTab);
   const aboutTab = document.createElement('button');
-  aboutTab.innerText = 'sobre nós';
+  aboutTab.innerText = 'Sobre Nós';
   aboutTab.setAttribute('class', 'tab');
-  aboutTab.setAttribute('id', 'about');
+  aboutTab.setAttribute('id', 'about-button');
   tabsSection.appendChild(aboutTab);
   const partnersTab = document.createElement('button');
-  partnersTab.innerText = 'parceiros';
+  partnersTab.innerText = 'Parceiros';
   partnersTab.setAttribute('class', 'tab');
-  partnersTab.setAttribute('id', 'partners');
+  partnersTab.setAttribute('id', 'partners-button');
   tabsSection.appendChild(partnersTab);
 
   // main setup
   const main = document.createElement('main');
   foundation.appendChild(main);
-  const background = new Image();
-  background.src = vinyard;
-  background.setAttribute('id', 'background');
-  main.appendChild(background);
+  loadMain();
 
   // footer setup
   const footer = document.createElement('footer');
@@ -68,8 +67,15 @@ const loadHome = () => {
   hoursList.appendChild(point3);
   const message = document.createElement('p');
   message.setAttribute('id', 'message');
-  message.innerText = 'apoie a comida local';
+  message.innerText = 'Apoie a comida local!';
   footer.appendChild(message);
 };
 
-export { loadHome };
+function setupLogoEvent() {
+  const logo = document.getElementById('logo-button');
+  logo.addEventListener('click', () => {
+    clearPage();
+    loadMain();
+  });
+}
+export { loadHome, setupLogoEvent };

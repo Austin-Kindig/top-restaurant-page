@@ -5,7 +5,7 @@ export const loadPartners = () => {
   main.appendChild(partners);
 
   const heading = document.createElement('h2');
-  heading.innerText = 'parceiros';
+  heading.innerText = 'Nosso Parceiros';
   partners.appendChild(heading);
 
   const content = document.createElement('p');

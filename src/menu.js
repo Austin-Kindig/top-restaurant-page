@@ -10,7 +10,7 @@ export const loadMenu = () => {
 
   // generate a menu heading
   const heading = document.createElement('h2');
-  heading.innerText = 'nosso cardápio';
+  heading.innerText = 'Nosso Cardápio';
   menu.appendChild(heading);
 
   // generate a list container

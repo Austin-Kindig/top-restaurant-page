@@ -5,7 +5,7 @@ export const loadAbout = () => {
   main.appendChild(about);
 
   const heading = document.createElement('h2');
-  heading.innerText = 'sobre nós';
+  heading.innerText = 'Sobre Nós';
   about.appendChild(heading);
 
   const content = document.createElement('p');
