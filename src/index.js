@@ -1,8 +1,8 @@
 import { loadHome } from './initial';
 import './style.css';
 import { loadMenu } from './menu';
-// import { loadAbout } from './about-us';
-// import { loadPartners } from './partners';
+import { loadAbout } from './about-us';
+import { loadPartners } from './partners';
 import { clearPage } from './clear';
 
 loadHome();

@@ -1,31 +1,43 @@
 export const loadMenu = () => {
+  // create a text node to hold the euro currency symbol
+  const euroSymbol = document.createTextNode('\u20AC');
+
+  // generate a container for the menu
   const main = document.querySelector('main');
   const menu = document.createElement('div');
   menu.setAttribute('id', 'menu');
   main.appendChild(menu);
 
+  // generate a menu heading
   const heading = document.createElement('h2');
   heading.innerText = 'nosso cardápio';
   menu.appendChild(heading);
 
+  // generate a list container
   const list = document.createElement('ul');
   menu.appendChild(list);
-  const item1 = document.createElement('li');
-  item1.innerText = 'vinho 5 &euro';
-  const item2 = document.createElement('li');
-  item2.innerText = 'migas 5 &euro';
-  const item3 = document.createElement('li');
-  item3.innerText = 'caldeirada 20 &euro';
-  const item4 = document.createElement('li');
-  item4.innerText = 'bacalhau 20 &euro';
-  const item5 = document.createElement('li');
-  item5.innerText = 'bola de mel 10 &euro';
-  const item6 = document.createElement('li');
-  item6.innerText = 'chocolate 5 &euro';
-  menu.appendChild(item1);
-  menu.appendChild(item2);
-  menu.appendChild(item3);
-  menu.appendChild(item4);
-  menu.appendChild(item5);
-  menu.appendChild(item6);
+
+  // take a inner-text string and use it to make a menu entry
+  const createMenuItem = (text) => {
+    const item = document.createElement('li');
+    item.innerText = text;
+    item.appendChild(euroSymbol.cloneNode(true));
+    return item;
+  };
+
+  // an array to store the strings used for each entry
+  const items = [
+    'vinho 5 ',
+    'migas 5 ',
+    'caldeirada 20 ',
+    'bacalhau 20 ',
+    'bola de mel 10 ',
+    'chocolate 5 ',
+  ];
+
+  // iterate over the items array and append the created list items
+  items.forEach((text) => {
+    const item = createMenuItem(text);
+    list.appendChild(item);
+  });
 };
