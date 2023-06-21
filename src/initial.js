@@ -34,7 +34,7 @@ const loadHome = () => {
   const partnersTab = document.createElement('button');
   partnersTab.innerText = 'parceiros';
   partnersTab.setAttribute('class', 'tab');
-  partnersTab.setAttribute('id', 'partners');++
+  partnersTab.setAttribute('id', 'partners');
   tabsSection.appendChild(partnersTab);
 
   // main setup

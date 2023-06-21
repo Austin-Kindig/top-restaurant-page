@@ -1,6 +1,5 @@
-// write a function to load a menu page
-const loadMenu = () => {
-  const main = document.getElementsByName('main');
+export const loadMenu = () => {
+  const main = document.querySelector('main');
   const menu = document.createElement('div');
   menu.setAttribute('id', 'menu');
   main.appendChild(menu);
@@ -30,4 +29,3 @@ const loadMenu = () => {
   menu.appendChild(item5);
   menu.appendChild(item6);
 };
-export default { loadMenu };

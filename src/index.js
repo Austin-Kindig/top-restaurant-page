@@ -1,27 +1,30 @@
 import { loadHome } from './initial';
 import './style.css';
 import { loadMenu } from './menu';
-import { loadAbout } from './about-us';
-import { loadPartners } from './partners';
+// import { loadAbout } from './about-us';
+// import { loadPartners } from './partners';
 import { clearPage } from './clear';
-
-const menuTab = document.getElementById('menu');
-const aboutTab = document.getElementById('about');
-const partnersTab = document.getElementById('partners');
 
 loadHome();
 
-menuTab.addEventListener('click', () => {
-  clearPage();
-  loadMenu();
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const menuTab = document.getElementById('menu');
+  const aboutTab = document.getElementById('about');
+  const partnersTab = document.getElementById('partners');
 
-aboutTab.addEventListener('click', () => {
-  clearPage();
-  loadAbout();
-});
+  // event listeners for tab functionality
+  menuTab.addEventListener('click', () => {
+    clearPage();
+    loadMenu();
+  });
 
-partnersTab.addEventListener('click', () => {
-  clearPage();
-  loadPartners();
+  aboutTab.addEventListener('click', () => {
+    clearPage();
+    loadAbout();
+  });
+
+  partnersTab.addEventListener('click', () => {
+    clearPage();
+    loadPartners();
+  });
 });
