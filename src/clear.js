@@ -1,3 +1,8 @@
 // write a function to remove the body content
-
-export { clearPage };
+const clearPage = () => {
+  const main = document.getElementsByName('main');
+  while (main.hasChildNodes()) {
+    main.removeChild(main.firstChild);
+  }
+};
+export default { clearPage };
